@@ -1,0 +1,27 @@
+{
+  "name": "@aws-appsync/utils",
+  "version": "1.1.0",
+  "description": "This project contains type definitions for AppSync resolver types.",
+  "main": "lib/index.js",
+  "license": "Apache-2.0",
+  "types": "./lib/index.d.ts",
+  "author": "Amazon Web Services",
+  "keywords": [
+    "graphql",
+    "appsync",
+    "aws",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "echo \"No tests\""
+  },
+  "gitHead": "69a356912aa5e6f41a615fb5a858f8d270483218"
+}
