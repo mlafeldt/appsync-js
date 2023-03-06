@@ -1,0 +1,24 @@
+{
+  "tasks": {
+    "vendor": "./vendor.sh"
+  },
+  "fmt": {
+    "files": {
+      "exclude": ["aws-appsync"]
+    },
+    "options": {
+      "lineWidth": 120,
+      "semiColons": false
+    }
+  },
+  "lint": {
+    "files": {
+      "exclude": ["aws-appsync"]
+    }
+  },
+  "test": {
+    "files": {
+      "exclude": ["aws-appsync"]
+    }
+  }
+}
