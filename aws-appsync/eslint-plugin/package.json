@@ -1,0 +1,56 @@
+{
+  "name": "@aws-appsync/eslint-plugin",
+  "version": "1.1.0",
+  "description": "An eslint plugin that lints AppSync resolver JavaScript.",
+  "main": "lib/index.js",
+  "license": "Apache-2.0",
+  "author": "Amazon Web Services",
+  "keywords": [
+    "graphql",
+    "appsync",
+    "aws",
+    "eslint"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/eslint": "8.4.10",
+    "@types/estree": "1.0.0",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "eslint": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "typescript": "^3.9.6 || ^4.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^5.43.0",
+    "@typescript-eslint/scope-manager": "^5.43.0",
+    "@typescript-eslint/types": "^5.43.0",
+    "@typescript-eslint/typescript-estree": "^5.43.0",
+    "@typescript-eslint/utils": "^5.43.0",
+    "pretty-quick": "^3.1.3"
+  },
+  "gitHead": "69a356912aa5e6f41a615fb5a858f8d270483218"
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"no-this.js","sourceRoot":"","sources":["../../src/rules/no-this.ts"],"names":[],"mappings":";AAEA,MAAM,IAAI,GAAoB;IAC1B,MAAM,EAAE,OAAO,CAAC,EAAE;QACd,OAAO;YACH,cAAc,EAAE,IAAI,CAAC,EAAE;gBACnB,OAAO,CAAC,MAAM,CAAC;oBACX,OAAO,EAAE,qCAAqC;oBAC9C,IAAI;iBACP,CAAC,CAAC;YACP,CAAC;SACJ,CAAC;IACN,CAAC;CACJ,CAAC;AAEF,iBAAS,IAAI,CAAC"}
