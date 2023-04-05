@@ -8,6 +8,7 @@ declare const _default: {
         'no-generators': import("eslint").Rule.RuleModule;
         'no-yield': import("eslint").Rule.RuleModule;
         'no-labels': import("eslint").Rule.RuleModule;
+        'no-regex': import("eslint").Rule.RuleModule;
         'no-this': import("eslint").Rule.RuleModule;
         'no-try': import("eslint").Rule.RuleModule;
         'no-while': import("eslint").Rule.RuleModule;
@@ -45,6 +46,7 @@ declare const _default: {
                 '@aws-appsync/no-generators': number;
                 '@aws-appsync/no-yield': number;
                 '@aws-appsync/no-labels': number;
+                '@aws-appsync/no-regex': number;
                 '@aws-appsync/no-this': number;
                 '@aws-appsync/no-try': number;
                 '@aws-appsync/no-while': number;
@@ -71,6 +73,7 @@ declare const _default: {
                 '@aws-appsync/no-generators': number;
                 '@aws-appsync/no-yield': number;
                 '@aws-appsync/no-labels': number;
+                '@aws-appsync/no-regex': number;
                 '@aws-appsync/no-this': number;
                 '@aws-appsync/no-try': number;
                 '@aws-appsync/no-while': number;

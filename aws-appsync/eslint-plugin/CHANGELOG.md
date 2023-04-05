@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/aws/aws-appsync-toolkit/compare/v1.2.0...v1.2.1) (2023-03-31)
+
+**Note:** Version bump only for package @aws-appsync/eslint-plugin
+
+# [1.2.0](https://github.com/aws/aws-appsync-toolkit/compare/v1.1.0...v1.2.0) (2023-03-31)
+
+### Features
+
+- add rule to preven the use of regex literals ([73e7fb5](https://github.com/aws/aws-appsync-toolkit/commit/73e7fb52db5a5572a1ab2a0eb35276989ae320e1))
+
 # [1.1.0](https://github.com/aws/aws-appsync-toolkit/compare/v1.0.1...v1.1.0) (2023-01-31)
 
 ### Bug Fixes

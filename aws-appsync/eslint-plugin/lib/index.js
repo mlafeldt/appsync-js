@@ -9,6 +9,7 @@ const no_for_1 = __importDefault(require("./rules/no-for"));
 const no_continue_1 = __importDefault(require("./rules/no-continue"));
 const no_generators_1 = __importDefault(require("./rules/no-generators"));
 const no_labels_1 = __importDefault(require("./rules/no-labels"));
+const no_regex_1 = __importDefault(require("./rules/no-regex"));
 const no_this_1 = __importDefault(require("./rules/no-this"));
 const no_try_1 = __importDefault(require("./rules/no-try"));
 const no_while_1 = __importDefault(require("./rules/no-while"));
@@ -32,6 +33,7 @@ module.exports = {
         'no-generators': no_generators_1.default,
         'no-yield': no_yield_1.default,
         'no-labels': no_labels_1.default,
+        'no-regex': no_regex_1.default,
         'no-this': no_this_1.default,
         'no-try': no_try_1.default,
         'no-while': no_while_1.default,
@@ -58,6 +60,7 @@ module.exports = {
                 '@aws-appsync/no-generators': 2,
                 '@aws-appsync/no-yield': 2,
                 '@aws-appsync/no-labels': 2,
+                '@aws-appsync/no-regex': 2,
                 '@aws-appsync/no-this': 2,
                 '@aws-appsync/no-try': 2,
                 '@aws-appsync/no-while': 2,
@@ -84,6 +87,7 @@ module.exports = {
                 '@aws-appsync/no-generators': 2,
                 '@aws-appsync/no-yield': 2,
                 '@aws-appsync/no-labels': 2,
+                '@aws-appsync/no-regex': 2,
                 '@aws-appsync/no-this': 2,
                 '@aws-appsync/no-try': 2,
                 '@aws-appsync/no-while': 2,

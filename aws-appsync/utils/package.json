@@ -1,6 +1,6 @@
 {
   "name": "@aws-appsync/utils",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "description": "This project contains type definitions for AppSync resolver types.",
   "main": "lib/index.js",
   "license": "Apache-2.0",
@@ -16,12 +16,16 @@
     "access": "public"
   },
   "devDependencies": {
+    "tsd": "^0.25.0",
     "typescript": "^4.8.4"
   },
   "scripts": {
     "clean": "rimraf lib",
     "build": "tsc",
-    "test": "echo \"No tests\""
+    "test": "tsd"
   },
-  "gitHead": "69a356912aa5e6f41a615fb5a858f8d270483218"
+  "tsd": {
+    "directory": "tests-d"
+  },
+  "gitHead": "a8ce856ac1d44d4c182abb871135a1f0fdff2a6a"
 }

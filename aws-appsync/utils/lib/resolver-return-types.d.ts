@@ -42,11 +42,20 @@ export type DynamoDBExpression = {
     expressionNames?: ExpressionAttributeNameMap;
     expressionValues?: ExpressionAttributeValueMap;
 };
-export type DynamoDBGetItem = {
+export type DynamoDBProjectionExpression = {
+    expression: string;
+    expressionNames?: Record<string, string>;
+};
+export type DynamoDBGetItemRequest = {
     operation: 'GetItem';
     key: Key;
     consistentRead?: ConsistentRead;
+    projection?: DynamoDBProjectionExpression;
 };
+/**
+ * @deprecated Use DynamoDBGetItemRequest
+ */
+export type DynamoDBGetItem = DynamoDBGetItemRequest;
 export type DynamoDBPutItemRequest = {
     operation: 'PutItem';
     key: Key;
@@ -83,6 +92,7 @@ export type DynamoDBQueryRequest = {
     consistentRead?: boolean;
     select?: 'ALL_ATTRIBUTES' | 'ALL_PROJECTED_ATTRIBUTES';
     filter?: DynamoDBExpression;
+    projection?: DynamoDBProjectionExpression;
 };
 export type DynamoDBScanRequest = {
     operation: 'Scan';
@@ -93,6 +103,7 @@ export type DynamoDBScanRequest = {
     totalSegments?: number;
     segment?: number;
     filter?: DynamoDBExpression;
+    projection?: DynamoDBProjectionExpression;
 };
 export type DynamoDBSyncRequest = {
     operation: 'Sync';
@@ -111,6 +122,7 @@ export type DynamoDBBatchGetItemRequest = {
             consistentRead?: boolean;
         };
     };
+    projection?: DynamoDBProjectionExpression;
 };
 export type DynamoDBBatchDeleteItemRequest = {
     operation: 'BatchDeleteItem';

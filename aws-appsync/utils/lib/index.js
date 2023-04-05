@@ -14,10 +14,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.extensions = exports.util = void 0;
+exports.runtime = exports.extensions = exports.util = void 0;
 __exportStar(require("./resolver-return-types"), exports);
 const util = {};
 exports.util = util;
 const extensions = {};
 exports.extensions = extensions;
+const runtime = {};
+exports.runtime = runtime;
 //# sourceMappingURL=index.js.map
