@@ -1,4 +1,4 @@
-import { SubscriptionFilter } from "./subscription-filter-types";
+import { SubscriptionFilter } from './subscription-filter-types';
 type Prettify<T> = {
     [k in keyof T]: T[k];
 } & {};
@@ -239,7 +239,7 @@ export type TransformUtils = {
      * rules will be satisfied to pass the subscription filter.
      * @returns {SubscriptionFilter} Subscription Filter expression object
      */
-    toSubscriptionFilter<T = unknown, R extends T & Record<string, any> = any>(obj: SubscriptionFilterObject<T>, ignoredFields?: SubscriptionFilterExcludeKeysType<T>, rules?: SubscriptionFilterRuleObject<T>): SubscriptionFilter;
+    toSubscriptionFilter<T = Record<string, any>>(obj: SubscriptionFilterObject<T>, ignoredFields?: SubscriptionFilterExcludeKeysType<T>, rules?: SubscriptionFilterRuleObject<T>): SubscriptionFilter;
 };
 export {};
 //# sourceMappingURL=transform-utils.d.ts.map

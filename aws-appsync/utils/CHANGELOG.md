@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/aws/aws-appsync-toolkit/compare/v1.2.3...v1.2.4) (2023-04-06)
+
+**Note:** Version bump only for package @aws-appsync/utils
+
+## [1.2.3](https://github.com/aws/aws-appsync-toolkit/compare/v1.2.2...v1.2.3) (2023-04-06)
+
+### Bug Fixes
+
+- change default type in `toSubscriptionFilter` ([325e1e2](https://github.com/aws/aws-appsync-toolkit/commit/325e1e2ce0886ecc730ed410920dd464d8bcadfd))
+
 ## [1.2.2](https://github.com/aws/aws-appsync-toolkit/compare/v1.2.1...v1.2.2) (2023-04-04)
 
 ### Bug Fixes
