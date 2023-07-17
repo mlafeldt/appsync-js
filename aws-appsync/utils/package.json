@@ -1,6 +1,6 @@
 {
   "name": "@aws-appsync/utils",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "This project contains type definitions for AppSync resolver types.",
   "main": "lib/index.js",
   "license": "Apache-2.0",
@@ -27,5 +27,5 @@
   "tsd": {
     "directory": "tests-d"
   },
-  "gitHead": "6e7606af508a465451507ae8e5703be56c66c3ee"
+  "gitHead": "fb901dc8c8dc6c135b091190def1a1ae1b7022a8"
 }

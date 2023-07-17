@@ -1,6 +1,6 @@
 # Type definition for @aws-appsync/utils
 
-This project contains utility function definitions and type definitions for working with AWS AppSync Resolvers written in JavaScript using the APPSYNC_JS runtime. This includes the `util` and `extensions` utilities. For more information on these utitlities, see the AppSync [documentation](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference-js.html).
+This project contains utility function definitions and type definitions for working with AWS AppSync Resolvers written in JavaScript using the APPSYNC_JS runtime. This includes the `util` and `extensions` utilities. For more information on these utilities, see the AppSync [documentation](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference-js.html).
 
 ## Usage
 

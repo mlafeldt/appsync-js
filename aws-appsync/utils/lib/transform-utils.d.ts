@@ -33,13 +33,14 @@ type DynamoDBArrayOperators<T> = {
     notContains?: T;
 };
 export type DynamoDBExpressionOperation<TOperand = unknown> = TOperand extends boolean ? DynamoDBOperator<DynamoDBBooleanOperators<NonNullable<boolean>>> : TOperand extends number ? DynamoDBOperator<DynamoDBNumberOperators<NonNullable<number>>> : TOperand extends string ? DynamoDBOperator<DynamoDBStringOperators<NonNullable<string>>> : TOperand extends boolean[] ? DynamoDBOperator<DynamoDBArrayOperators<boolean>> : TOperand extends number[] ? DynamoDBOperator<DynamoDBArrayOperators<NonNullable<number>>> : TOperand extends string[] ? DynamoDBOperator<DynamoDBArrayOperators<NonNullable<string>>> : any;
-export type DynamoDBFilterObject<TOperand = any> = TOperand extends Record<string, any> ? Prettify<{
-    [k in keyof TOperand]?: DynamoDBExpressionOperation<NonNullable<TOperand>[k]>;
-} & {
-    and?: DynamoDBFilterObject<TOperand> | DynamoDBFilterObject<TOperand>[];
-    or?: DynamoDBFilterObject<TOperand> | DynamoDBFilterObject<TOperand>[];
-    not?: DynamoDBFilterObject<TOperand>;
-}> : never;
+export type ShallowDynamoDBFilterObject<T = unknown> = T extends Record<string, any> ? Prettify<{
+    [k in keyof T]?: DynamoDBExpressionOperation<T[k]>;
+}> : any;
+export type DynamoDBFilterObject<T = unknown> = T extends Record<string, any> ? Prettify<ShallowDynamoDBFilterObject<T> & {
+    and?: DynamoDBFilterObject<T> | DynamoDBFilterObject<T>[];
+    or?: DynamoDBFilterObject<T> | DynamoDBFilterObject<T>[];
+    not?: DynamoDBFilterObject<T>;
+}> : {};
 type OpenSearchBaseOperators = {
     exists?: boolean;
 };
@@ -66,9 +67,10 @@ type OpenSearchStringOperators<T> = OpenSearchEqualityOperators<T> & {
 };
 type OpenSearchBooleanOperators<T> = OpenSearchEqualityOperators<T>;
 export type OpenSearchQueryOperation<TOperand = unknown> = TOperand extends boolean ? OpenSearchBaseOperators & OpenSearchBooleanOperators<boolean> : TOperand extends number ? OpenSearchBaseOperators & OpenSearchNumberOperators<number> : TOperand extends string ? OpenSearchBaseOperators & OpenSearchStringOperators<string> : TOperand extends boolean[] ? OpenSearchBaseOperators & OpenSearchBooleanOperators<boolean> : TOperand extends number[] ? OpenSearchBaseOperators & OpenSearchNumberOperators<number> : TOperand extends string[] ? OpenSearchBaseOperators & OpenSearchStringOperators<string> : any;
-export type OpenSearchQueryObject<T = unknown> = T extends Record<string, any> ? Prettify<{
+export type ShallowOpenSearchQueryObject<T = unknown> = T extends Record<string, any> ? Prettify<{
     [k in keyof T]?: OpenSearchQueryOperation<T[k]>;
-} & {
+}> : any;
+export type OpenSearchQueryObject<T = unknown> = T extends Record<string, any> ? Prettify<ShallowOpenSearchQueryObject<T> & {
     and?: OpenSearchQueryObject<T>[];
     or?: OpenSearchQueryObject<T>[];
     not?: OpenSearchQueryObject<T>;
@@ -138,7 +140,7 @@ export type TransformUtils = {
      */
     toDynamoDBFilterExpression<T extends {
         [key: Exclude<string, 'and' | 'or' | 'not'>]: any;
-    } = any>(filterObject: DynamoDBFilterObject<T>): string;
+    } = Record<string, any>>(filterObject: DynamoDBFilterObject<T>): string;
     /**
      * Converts the given input into its equivalent DynamoDB condition expression, returning it as a Json string.
      *
@@ -149,7 +151,7 @@ export type TransformUtils = {
      */
     toDynamoDBConditionExpression<T extends {
         [key: Exclude<string, 'and' | 'or' | 'not'>]: any;
-    } = any>(conditionObject: DynamoDBFilterObject<T>): string;
+    } = Record<string, any>>(conditionObject: DynamoDBFilterObject<T>): string;
     /**
      * Converts the given input into its equivalent OpenSearch Query DSL expression, returning it
      * as a JSON string.
@@ -224,7 +226,7 @@ export type TransformUtils = {
      */
     toElasticsearchQueryDSL<T extends {
         [key: Exclude<string, 'and' | 'or' | 'not'>]: any;
-    } = any>(obj: OpenSearchQueryObject<T>): Record<string, unknown>;
+    } = Record<string, any>>(obj: OpenSearchQueryObject<T>): Record<string, unknown>;
     /**
      * Converts a Map input object to a `SubscriptionFilter` expression object. The
      * `util.transform.toSubscriptionFilter` method is used as an input to the

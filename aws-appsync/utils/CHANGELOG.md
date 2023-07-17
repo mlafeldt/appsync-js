@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/aws/aws-appsync-toolkit/compare/v1.2.4...v1.2.5) (2023-04-17)
+
+### Bug Fixes
+
+- use shallow filter type to prevent recursion ([a98e5f8](https://github.com/aws/aws-appsync-toolkit/commit/a98e5f880051f7099a4d5b7adbf63d499d47f530))
+
 ## [1.2.4](https://github.com/aws/aws-appsync-toolkit/compare/v1.2.3...v1.2.4) (2023-04-06)
 
 **Note:** Version bump only for package @aws-appsync/utils
